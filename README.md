@@ -1,3 +1,8 @@
+Run : npm i
+for install package
+Run : npm run dev
+for Test and debug
+
 # 🚀 Web Dev Portfolio & Modular Showcase
 
 โปรเจกต์นี้จัดทำขึ้นเพื่อเป็น **Interactive Portfolio** รวมผลงานการพัฒนาเว็บไซต์และเว็บแอปพลิเคชันต่างๆ ไว้ในที่เดียว โดยเน้นแนวคิด **"Reusability & Modular Architecture"** — นำโค้ดหรือฟีเจอร์ที่เคยพัฒนาแล้วมาปรับแต่ง พัฒนาต่อยอด และจัดเก็บอย่างเป็นระบบ
