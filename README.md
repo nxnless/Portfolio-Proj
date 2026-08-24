@@ -1,75 +1,41 @@
-# React + TypeScript + Vite
+Run : npm i
+for install package
+Run : npm run dev
+for Test and debug
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🚀 Web Dev Portfolio & Modular Showcase
 
-Currently, two official plugins are available:
+โปรเจกต์นี้จัดทำขึ้นเพื่อเป็น **Interactive Portfolio** รวมผลงานการพัฒนาเว็บไซต์และเว็บแอปพลิเคชันต่างๆ ไว้ในที่เดียว โดยเน้นแนวคิด **"Reusability & Modular Architecture"** — นำโค้ดหรือฟีเจอร์ที่เคยพัฒนาแล้วมาปรับแต่ง พัฒนาต่อยอด และจัดเก็บอย่างเป็นระบบ
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 💡 Core Concept
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+นอกจากจะเป็นพื้นที่จัดแสดงผลงานแล้ว จุดเด่นและความพิเศษของโปรเจกต์นี้คือ **โครงสร้างแบบ Modular** 
 
-Note: This will impact Vite dev & build performances.
+> ✨ **Drop-in `src` Ready:**  
+> ทุกๆ Sub-project/Site ที่อยู่ในคลังนี้ ถูกออกแบบมาให้มีความเป็นเอกเทศ (Decoupled) คุณสามารถคัดลอกโฟลเดอร์ของไซต์นั้นๆ ไป **วางทดแทนโฟลเดอร์ `src/` ของโปรเจกต์ใหม่** (เช่น React, Vue, Next.js หรือ Vite starter) เพื่อเริ่มพัฒนาโปรเจกต์ใหม่ด้วยดีไซน์และฟังก์ชันพื้นฐานได้ทันทีโดยไม่ต้องเขียนใหม่ตั้งแต่ต้น!
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🔥 Key Features
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Centralized Hub:** หน้าพอร์ตโฟลิโอหลักสำหรับเรียกดูและทดลองใช้งาน Sub-projects ทั้งหมด
+- **High Reusability:** รวม UI components, Hooks และ Utilities ที่ผ่านการ Refactor ให้พร้อมดึงไปใช้ซ้ำ
+- **Plug-and-Play `src` Directory:** แต่ละ Sub-project แยกไฟล์อย่างชัดเจน สามารถใช้เป็น Boilerplate/Template สำหรับโปรเจกต์ใหม่ได้เลย
+- **Customizable:** รองรับการปรับแต่ง Theme, Config และ Component สไตล์ต่างๆ ได้ง่าย
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📁 Project Structure
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+```text
+.
+├── src/                     # Source Code ของตัว Portfolio หลัก
+│   ├── components/          # Shared UI Components
+│   └── projects/            # รวม Sub-projects ต่างๆ
+│       ├── project-alpha/   # 👈 สามารถก๊อปปี้เนื้อหาไปใส่ใน src/ ของโปรเจกต์ใหม่ได้เลย
+│       ├── project-beta/
+│       └── project-gamma/
+├── public/                  # Static Assets
+└── package.json
